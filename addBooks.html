@@ -1,134 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
 
-    <style>
-      .Add-Container {
-        /* width: 30%; */
-        /* max-width: 800px; */
-        display: flex;
-        flex-direction: column;
-        /* margin: 30px auto; */
-        margin: 20px 50px;
-        box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(234, 232, 230, 1);
-        border-radius: 13px;
-      }
-      .Add-Heading {
-        padding: 15px;
-        background-color: rgb(180, 225, 210);
-        border-radius: 13px 13px 0px 0px;
-        font-size: larger;
-        text-align: center;
-      }
-      .Styleform {
-        padding: 8px;
-        display: flex;
-       /* align-items: center; */
-       flex-direction: column;
-      }
-      .form-row{
-        display: flex;
-        align-items: center;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css" />
 
-      }
+  <style>
+    .Add-Container {
+      /* width: 30%; */
+      /* max-width: 800px; */
+      display: flex;
+      flex-direction: column;
+      /* margin: 30px auto; */
+      margin: 20px 50px;
+      box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(234, 232, 230, 1);
+      border-radius: 13px;
+    }
 
-      .div-box {
-        /* flex-grow: 1; */
-        /* display: flex;
+    .Add-Heading {
+      padding: 15px;
+      background-color: rgb(180, 225, 210);
+      border-radius: 13px 13px 0px 0px;
+      font-size: larger;
+      text-align: center;
+    }
+
+    .Styleform {
+      padding: 8px;
+      display: flex;
+      /* align-items: center; */
+      flex-direction: column;
+    }
+
+    .form-row {
+      display: flex;
+      align-items: center;
+
+    }
+
+    .div-box {
+      /* flex-grow: 1; */
+      /* display: flex;
         flex-direction: row; */
-        padding: 12px;
-        margin: 5px 0;
-        border: 1px solid rgba(234, 232, 230, 1);
-        box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
-        border-radius: 7px;
-      }
-      input {
-        padding: 12px;
-        margin: 20px 0px;
-        margin-right: 50px;
-        border: 1px solid rgba(234, 232, 230, 1);
-        box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
-        border-radius: 7px;
-      }
-      label {
-        font-size: large;
-        padding: 15px;
-        margin-right: 50px;
-        width: 50px;
-      }
-      .sub{
-        padding: 15px;
-        margin-left: 15px;
-        border: none;
-        font-weight: bold;
-        font-size: 15px;
-        background-color: rgb(180, 225, 210);
-        cursor: pointer;
-      }
-      .sub:hover{
-        background-color: rgb(133, 180, 164);
-    color: white;
-      }
-    </style>
-  </head>
+      padding: 12px;
+      margin: 5px 0;
+      border: 1px solid rgba(234, 232, 230, 1);
+      box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
+      border-radius: 7px;
+    }
 
-  <body>
-    <!-- <div class="main-container"> -->
-      <div class="container">
-        <div class="nav-container">
-          <div class="head">LMS</div>
-          <ul>
-            <li><a href='index.html'>DashBoard</a></li>
-            <li><a href='addBooks.html'>Add Books</a></li>
-            <li><a href='allBooks.html'>All Books</a></li>
-            <li><a href='borrowBook.html'>Borrow Book</a></li>
-            <li><a href='returnBook.html'>Return Book</a></li>
-          </ul>
-        </div>
+    input {
+      padding: 12px;
+      margin: 20px 0px;
+      margin-right: 50px;
+      border: 1px solid rgba(234, 232, 230, 1);
+      box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
+      border-radius: 7px;
+    }
 
-        <div class="Add-Container">
-          <div class="Add-Heading">Add New Books</div>
-          <div class="Styleform">
-            <form action="" id="myForm">
-              <div class="form-row">
-                <label for="title">Title</label>
-                <input type="text" id="myTitle" name="title" />
-              </div>
-              <div class="form-row">
-                <label for="author">Author</label>
-                <input type="text" id="myAuthor" name="author" />
-              </div>
-              <div class="form-row">
-                <label for="year">Year</label>
-                <input type="number" min="1800" max="2024" name="year" id="myYear" />
-              </div>
-              <div class="form-row">
-                <label for="genre">Genre</label>
-                <input type="text" id="myGenre" name="genre" />
-              </div>
-              <div class="form-row">
-              <label for="available">IsAvailable</label>
-              <div class="div-box">
-                <select id="myAv" name="available">
-                  <option value="true">true</option>
-                  <option value="false">false</option>
-                </select>
-              </div>
-            </div>
-              <div>
-                <input type="submit" value="submit" class="sub" />
-              </div>
-            </form>
+    label {
+      font-size: large;
+      padding: 15px;
+      margin-right: 50px;
+      width: 50px;
+    }
+
+    .sub {
+      padding: 15px;
+      margin-left: 15px;
+      border: none;
+      font-weight: bold;
+      font-size: 15px;
+      background-color: rgb(180, 225, 210);
+      cursor: pointer;
+    }
+
+    .sub:hover {
+      background-color: rgb(133, 180, 164);
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="nav-container">
+      <div class="head">LMS</div>
+      <ul>
+        <li><a href='index.html'>DashBoard</a></li>
+        <li><a href='addBooks.html'>Add Books</a></li>
+        <li><a href='allBooks.html'>All Books</a></li>
+        <li><a href='borrowBook.html'>Borrow Book</a></li>
+        <li><a href='returnBook.html'>Return Book</a></li>
+      </ul>
+    </div>
+
+    <div class="Add-Container">
+      <div class="Add-Heading">Add New Books</div>
+      <div class="Styleform">
+        <form action="" id="myForm">
+          <div class="form-row">
+            <label for="title">Title</label>
+            <input type="text" id="myTitle" name="title" />
           </div>
-        </div>
+          <div class="form-row">
+            <label for="author">Author</label>
+            <input type="text" id="myAuthor" name="author" />
+          </div>
+          <div class="form-row">
+            <label for="year">Year</label>
+            <input type="number" min="1800" max="2024" name="year" id="myYear" />
+          </div>
+          <div class="form-row">
+            <label for="genre">Genre</label>
+            <input type="text" id="myGenre" name="genre" />
+          </div>
+          <div class="form-row">
+            <label for="available">IsAvailable</label>
+            <div class="div-box">
+              <select id="myAv" name="available">
+                <option value="true">true</option>
+                <option value="false">false</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <input type="submit" value="submit" class="sub" />
+          </div>
+        </form>
       </div>
-    <!-- </div> -->
-    <!-- <script src="index.js"></script> -->
-    <script src="addBooks.js"></script>
-  </body>
+    </div>
+  </div>
+  <!-- </div> -->
+  <script src="index.js"></script>
+  <script src="addBooks.js"></script>
+</body>
+
 </html>

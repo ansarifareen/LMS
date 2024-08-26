@@ -2,79 +2,85 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    
-    <style>
-        .Return-Container {
-          /* align-items: center;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+
+  <style>
+    .Return-Container {
+      /* align-items: center;
           justify-content: center; */
-          display: flex;
-          margin: 30px;
-          margin-left: 50px;
-          /* max-width: 500px; */
-        }
-        .rob {
-          display: flex;
-          display: flex;
-        padding: 10px;
-        margin: 50px 30px 0px 50px;
-        height: 30px;
-        box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(234, 232, 230, 1);
-        border-radius: 13px;
-        font-size: 18px;
-        }
-        .b-btn {
-          margin-top: 52px;
-        padding: 15px;
-        border: none;
-        font-weight: bold;
-        font-size: 15px;
-        background-color: rgb(180, 225, 210);
-        cursor: pointer;
-        border-radius: 7px;
-      }
-        .b-btn:hover{
-          background-color: rgb(133, 180, 164);
+      display: flex;
+      margin: 30px;
+      margin-left: 50px;
+      /* max-width: 500px; */
+    }
+
+    .rob {
+      display: flex;
+      padding: 10px;
+      margin: 50px 30px 0px 50px;
+      height: 30px;
+      box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(234, 232, 230, 1);
+      border-radius: 13px;
+      font-size: 18px;
+    }
+
+    .returnDrop {
+      margin-left: 10px;
+    }
+
+    .b-btn {
+      margin-top: 52px;
+      padding: 15px;
+      border: none;
+      font-weight: bold;
+      font-size: 15px;
+      background-color: rgb(180, 225, 210);
+      cursor: pointer;
+      border-radius: 7px;
+    }
+
+    .b-btn:hover {
+      background-color: rgb(133, 180, 164);
       color: white;
-        }
-      </style>
+    }
+  </style>
 
 </head>
 
 <body>
-    <!-- <div class='main-container'> -->
-        <div class='container'>
-            <div class='nav-container'>
-                <div class="head">LMS</div>
-                <ul>
-                  <li><a href='index.html'>DashBoard</a></li>
-                  <li><a href='addBooks.html'>Add Books</a></li>
-                  <li><a href='allBooks.html'>All Books</a></li>
-                  <li><a href='borrowBook.html'>Borrow Book</a></li>
-                  <li><a href='returnBook.html'>Return Book</a></li>
-                </ul>
-            </div>
-            
+  <div class='container'>
+    <div class='nav-container'>
+      <div class="head">LMS</div>
+      <ul>
+        <li><a href='index.html'>DashBoard</a></li>
+        <li><a href='addBooks.html'>Add Books</a></li>
+        <li><a href='allBooks.html'>All Books</a></li>
+        <li><a href='borrowBook.html'>Borrow Book</a></li>
+        <li><a href='returnBook.html'>Return Book</a></li>
+      </ul>
+    </div>
 
-            <div class="Return-Container">
-              <div class="rob">
-                <label for="ReturnBook"> Choose Book to Return</label>
-                <select id="myrb" name="ReturnBook">
-                  <!-- <option value="true">True</option>
-                              <option value="false">False</option> -->
-                </select>
-              </div>
-              <div>
-                <button class="b-btn">Return</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <script src="index.js"></script> -->
+
+    <div class="Return-Container">
+      <div class="rob">
+        <label for="ReturnBook"> Choose Book to Return</label>
+        <select id="myrb" name="ReturnBook" class="returnDrop">
+          <option value="">Select an option</option>
+          <!--  <dynamic options here> -->
+        </select>
+      </div>
+      <div>
+        <button class="b-btn">Return</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="index.js"></script>
+  <script src="returnBook.js"></script>
 </body>
 
 </html>
