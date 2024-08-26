@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      .allbook-conatiner {
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        /* width: 80%; */
+        /* box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(234, 232, 230, 1);
+        border-radius: 13px; */
+        /* min-width: 100%; */
+
+         /* display: flex; */
+        /* flex-direction: column; */
+        /* border: 1px solid red; */
+      }
+      .search-container {
+        display: flex;
+      }
+      .search-bars {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        /* border: 1px solid red; */
+      }
+      .bar {
+        margin: 10px;
+        /* border: 1px solid red; */
+      }
+      .bar input {
+        padding: 15px;
+        box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(234, 232, 230, 1);
+        border-radius: 5px;
+      }
+      .s-btn {
+        border: none;
+        background-color: rgb(180, 225, 210);
+        padding: 13px;
+        margin-left: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .s-btn:hover {
+        background-color: rgb(133, 180, 164);
+        color: white;
+        cursor: pointer;
+      }
+      .check {
+        /* border: 1px solid red; */
+        margin: 50px 0px 80px 0px;
+        box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(234, 232, 230, 1);
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      .check input[type="checkbox"] {
+        accent-color:  rgb(113, 170, 151);
+      }
+      .reset-btn{
+         /* border: 1px solid red; */
+         margin: 50px 5px;
+      }
+
+      .flexallbook-container {
+        /* display: flex; */
+        margin: 10px 0px;
+        /* flex-wrap: wrap; */
+        height:320px;
+        overflow-y: auto;
+        /* border: 1px solid red; */
+        box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(234, 232, 230, 1);
+        border-radius: 5px;
+      }
+      table {
+        margin: 20px;
+        /* margin-left: 0px; */
+        border-collapse: collapse;
+        /* width: 100%; */
+        height: auto;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      th {
+        background-color: rgb(180, 225, 210);
+      }
+      .remove{
+        padding: 10px;
+        border: none;
+        background-color: rgb(180, 225, 210);
+        margin-left: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .remove:hover{
+        background-color: rgb(133, 180, 164);
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class='main-container'> -->
+    <div class="container">
+      <div class="nav-container">
+        <div class="head">LMS</div>
+        <ul>
+          <li><a href="index.html">DashBoard</a></li>
+          <li><a href="addBooks.html">Add Books</a></li>
+          <li><a href="allBooks.html">All Books</a></li>
+          <li><a href="borrowBook.html">Borrow Book</a></li>
+          <li><a href="returnBook.html">Return Book</a></li>
+        </ul>
+      </div>
+
+      <div class="allbook-conatiner">
+        <div class="search-container">
+          <div class="search-bars">
+            <div class="bar">
+              <input type="text" placeholder="SearchbyTitle"  id="search-title"/>
+              <button class="s-btn" id="s-btn1">Search</button>
+            </div>
+            <div class="bar">
+              <input type="text" placeholder="SearchbyGenre"  id="search-genre"/>
+              <button class="s-btn" id="s-btn2">Search</button>
+            </div>
+          </div>
+          <div class="check">
+            <label for="check">Show Only Available Books</label>
+            <input type="checkbox" id="check"  onclick="showAvailable()"/>
+          </div>
+          <div class="reset-btn">
+            <button class="s-btn" id="reset-button">Reset</button>
+           </div>
+        </div>
+
+        <div class="flexallbook-container" id="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>s.no</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Year</th>
+                <th>Genre</th>
+                <th>Availability</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="table-body">
+              <!-- dynamic data is here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+
+    <script src="allbooks.js"></script>
+    <!-- <script src="index.js"></scrip> -->
+  </body>
+</html>
