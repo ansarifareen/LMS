@@ -1,3 +1,4 @@
+
 const form= document.getElementById('myForm');
 
 form.addEventListener('submit',function(event){
@@ -32,7 +33,7 @@ form.addEventListener('submit',function(event){
         books.push(book);
         // JavaScript object into a JSON-formatted string.
         localStorage.setItem('books',JSON.stringify(books));
-    alert('Book Added successFull');
+       alert('Book Added successFull');
 
     }
     else{
