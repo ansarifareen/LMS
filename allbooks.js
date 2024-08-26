@@ -134,3 +134,10 @@ function showAvailable() {
     }
   });
 }
+
+function hello(){
+  alert('hi');
+}
+
+
+//hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
