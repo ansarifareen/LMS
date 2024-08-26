@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .toLowerCase();
 
     const filteredData = storedBooks.filter(
-      (item) => item.title.trim().toLowerCase() === searchGenreValue
+      (item) => item.genre.trim().toLowerCase() === searchGenreValue
     );
     renderTable(filteredData);
 
