@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   renderTable(storedBooks); // main Rendereing
 
-  // :::::::::::::::: function for SEarch by Title :::::::::::::::::::::::
+  // :::::::::::::::: function for SEarch by Title :::::::::::::::::::::::::::::::::::::::::::::
   const searchbtn1 = document.getElementById("s-btn1");
   //reference for clearing the input when seaarched
   const searchInput1 = document.getElementById("search-title");
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInput1.value = "";
   });
 
-  // :::::::::::::::: function for Search by Genre :::::::::::::::::::::::
+  // :::::::::::::::: function for Search by Genre ::::::::::::::::::::::::::::::::::::::::
   const searchbtn2 = document.getElementById("s-btn2");
   const searchInput2 = document.getElementById("search-genre");
   searchbtn2.addEventListener("click", function () {
@@ -77,17 +77,24 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInput2.value = "";
   });
 
-  // :::::::::::::::: function for Reset the table :::::::::::::::::::::::
-  const reset = document.getElementById("reset-button");
-  reset.addEventListener("click", function () {
-    storedBooks = JSON.parse(localStorage.getItem("books")) || []; //Reload
-    renderTable(storedBooks); // render the table to the original
+  // :::::::::::::::: function for Search by Author ::::::::::::::::::::::::::::::::::::::::
+  const searchbtn3 = document.getElementById("s-btn3");
+  const searchInput3 = document.getElementById("search-author");
+  searchbtn3.addEventListener("click", function () {
+    const searchAuthorValue = document
+      .getElementById("search-author")
+      .value.trim()
+      .toLowerCase();
 
-    const check = document.getElementById("check");
-    check.checked = false; //unchecking the check-box
+    const filteredData = storedBooks.filter(
+      (item) => item.author.trim().toLowerCase() === searchAuthorValue
+    );
+    renderTable(filteredData);
+
+    searchInput3.value = "";
   });
 
-  //:::::::::::::::: function showing the available books  :::::::::::::::::::::::
+  //:::::::::::::::: function showing the available books  ::::::::::::::::::::::::::::::::::
   const check = document.getElementById("check");
 
   check.addEventListener("change", function (event) {
@@ -99,5 +106,21 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       renderTable(storedBooks);
     }
+  });
+  //:::::::::::::::::::::::::::::;function for sort the table by year:::::::::::::::::::::::::::::::
+  const sortByYear= document.getElementById('sort-button');
+  sortByYear.addEventListener("click",function(){
+    const sortedBook = storedBooks.sort((a,b)=> a.year - b.year);
+    renderTable(sortedBook);
+  });
+
+  // :::::::::::::::: function for Reset the table ::::::::::::::::::::::::::::::::::::::::::
+  const reset = document.getElementById("reset-button");
+  reset.addEventListener("click", function () {
+    storedBooks = JSON.parse(localStorage.getItem("books")) || []; //Reload
+    renderTable(storedBooks); // render the table to the original
+
+    const check = document.getElementById("check");
+    check.checked = false; //unchecking the check-box
   });
 });

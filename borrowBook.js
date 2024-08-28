@@ -15,24 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const borrowBtn = document.getElementById("b-button");
   borrowBtn.addEventListener("click", function () {
     const selectedOption = borrow.options[borrow.selectedIndex];
-    // console.log("hvfhjd",selectedOption.value);
     const selectedTitle = selectedOption.value;
-    // console.log("Selected Title:", selectedTitle);
-
-    //    const filteredData = storedBooks.filter(item => item.title.trim().toLowercase() !== selectedTitle);
-
-    // const rows = document.querySelectorAll("table tbody tr");
-    // rows.forEach(row =>{
-    //     const titleCell = row.querySelector(".title-col");
-    //     if(titleCell){
-    //       const titleText = titleCell.textContent;
-    //       console.log("Row Title Text:", titleText);
-    //       if(titleText === selectedTitle){
-    //         row.remove();
-    //       }
-    //     }
-    // });
-
+    //find the book in the stored array
+    const bookToBorrow = storedBooks.find(
+      (book) => book.title === selectedTitle
+    );
+    if (bookToBorrow) {
+      //update availability
+      bookToBorrow.isAvailable = false;
+      //saving updated book list back to localStorage
+      localStorage.setItem("books", JSON.stringify(storedBooks));
+      alert(`You have Borrowed: ${selectedTitle} Book`);
+    }
     //remove the option
     selectedOption.remove();
   });

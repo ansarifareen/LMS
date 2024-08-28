@@ -9,12 +9,11 @@
 
   <style>
     .Return-Container {
-      /* align-items: center;
-          justify-content: center; */
+
       display: flex;
       margin: 30px;
       margin-left: 50px;
-      /* max-width: 500px; */
+      /
     }
 
     .rob {
@@ -28,11 +27,15 @@
       font-size: 18px;
     }
 
+    .rob label {
+      margin-top: 3px;
+    }
+
     .returnDrop {
       margin-left: 10px;
     }
 
-    .b-btn {
+    .r-btn {
       margin-top: 52px;
       padding: 15px;
       border: none;
@@ -43,7 +46,7 @@
       border-radius: 7px;
     }
 
-    .b-btn:hover {
+    .r-btn:hover {
       background-color: rgb(133, 180, 164);
       color: white;
     }
@@ -54,8 +57,9 @@
 <body>
   <div class='container'>
     <div class='nav-container'>
-      <div class="head">LMS</div>
+
       <ul>
+        <div class="head">LMS</div>
         <li><a href='index.html'>DashBoard</a></li>
         <li><a href='addBooks.html'>Add Books</a></li>
         <li><a href='allBooks.html'>All Books</a></li>
@@ -74,7 +78,7 @@
         </select>
       </div>
       <div>
-        <button class="b-btn">Return</button>
+        <button class="r-btn" id="r-button">Return</button>
       </div>
     </div>
   </div>

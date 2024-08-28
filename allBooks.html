@@ -11,14 +11,6 @@
       margin-top: 20px;
       margin-left: 30px;
       margin-bottom: 20px;
-      /* width: 80%; */
-      /* box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(234, 232, 230, 1);
-        border-radius: 13px; */
-      /* min-width: 100%; */
-      /* display: flex; */
-      /* flex-direction: column; */
-      /* border: 1px solid red; */
     }
 
     .search-container {
@@ -58,8 +50,7 @@
     }
 
     .check {
-      /* border: 1px solid red; */
-      margin: 50px 0px 80px 0px;
+     margin-top: 40px;
       box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
       border: 1px solid rgba(234, 232, 230, 1);
       border-radius: 5px;
@@ -71,17 +62,18 @@
     }
 
     .reset-btn {
-      /* border: 1px solid red; */
-      margin: 50px 5px;
+     
+      margin: 30px 20px;
+    }
+
+    .sort-btn {
+      margin: 30px 5px;
     }
 
     .flexallbook-container {
-      /* display: flex; */
       margin: 10px 0px;
-      /* flex-wrap: wrap; */
-      height: 320px;
+      height: 280px;
       overflow-y: auto;
-      /* border: 1px solid red; */
       box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.08);
       border: 1px solid rgba(234, 232, 230, 1);
       border-radius: 5px;
@@ -89,9 +81,9 @@
 
     table {
       margin: 20px;
-      /* margin-left: 0px; */
+
       border-collapse: collapse;
-      /* width: 100%; */
+
       height: auto;
     }
 
@@ -123,11 +115,12 @@
 </head>
 
 <body>
-  <!-- <div class='main-container'> -->
+
   <div class="container">
     <div class="nav-container">
-      <div class="head">LMS</div>
+
       <ul>
+        <div class="head">LMS</div>
         <li><a href="index.html">DashBoard</a></li>
         <li><a href="addBooks.html">Add Books</a></li>
         <li><a href="allBooks.html">All Books</a></li>
@@ -147,13 +140,24 @@
             <input type="text" placeholder="SearchbyGenre" id="search-genre" />
             <button class="s-btn" id="s-btn2">Search</button>
           </div>
+          <div class="bar">
+            <input type="text" placeholder="SearchbyAuthor" id="search-author" />
+            <button class="s-btn" id="s-btn3">Search</button>
+          </div>
         </div>
-        <div class="check">
-          <label for="check">Show Only Available Books</label>
-          <input type="checkbox" id="check" />
-        </div>
-        <div class="reset-btn">
-          <button class="s-btn" id="reset-button">Reset</button>
+        <div>
+          <div class="check">
+            <label for="check">Show Only Available Books</label>
+            <input type="checkbox" id="check" />
+          </div>
+          <div class="reset-sort" style="display: flex;">
+            <div class="sort-btn">
+              <button class="s-btn" id="sort-button">SortByYear</button>
+            </div>
+            <div class="reset-btn">
+              <button class="s-btn" id="reset-button">Reset</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -177,7 +181,6 @@
       </div>
     </div>
   </div>
-  <!-- </div> -->
 
   <script src="allbooks.js"></script>
   <script src="index.js"></script>
