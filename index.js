@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+
   const bookConatiner = document.getElementById("books-container");
   const bookCount = document.getElementById("book-count");
 
@@ -48,3 +49,5 @@ document.addEventListener("DOMContentLoaded", function () {
       bookConatiner.appendChild(cardElement);
     });
 });
+
+
